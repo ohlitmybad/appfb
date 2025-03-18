@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -29,6 +29,49 @@
 </script>
 <defs>
 <style>
+
+:root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #f5f7fa;
+        --container-bg: #ffffff;
+        --text-color: #333333;
+        --border-color: #e0e0e0;
+        --hover-color: #f0f0f0;
+        --button-color: #3498db;
+        --button-text: #ffffff;
+        --header-bg: #ffffff;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        --table-bg: #f2f2f2;
+    }
+
+    .dark-mode {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --background-color: #0e0f0f;
+        --container-bg: #1a1a1a;
+        --text-color: #e0e0e0;
+        --border-color: #333333;
+        --hover-color: #252525;
+        --button-color: #2980b9;
+        --button-text: #ffffff;
+        --header-bg: #0e0f0f;
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        --table-bg: #333333;
+    }
+
+
+    body {
+        font-family: 'Inter', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        width: 470px;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+    }
 
 #matchingNames {
   background-color: #ffffff;
@@ -84,433 +127,269 @@ body.dark-mode #matchingNames .name:hover {
 .team {
   color: #777777;
 }
+	
 
 
-
-.result-color-blue {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-pink {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-orange {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-green {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-
-
-
-.result-color-bleu {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-rose {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-
-
+/* Color classes for radar chart */
 .result-color-1 {
   color: #3062FB !important;
   stroke: #3062FB;
   fill: #3062FB;
-  fill-opacity: 0.02;
+  fill-opacity: 0;
 }
-
-
 .result-color-2 {
   color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  stroke: #F62681;
+  fill: #F62681;
+  fill-opacity: 0;
 }
-
 .result-color-3 {
   color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  stroke: #55d149;
+  fill: #55d149;
+  fill-opacity: 0;
 }
-
 .result-color-4 {
   color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  stroke: #FFCF5F;
+  fill: #FFCF5F;
+  fill-opacity: 0;
 }
-
-
 .result-color-5 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(153, 50, 204) !important;
+  stroke: rgb(153, 50, 204);
+  fill: rgb(153, 50, 204);
+  fill-opacity: 0;
 }
-
-
 .result-color-6 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
+  color: rgb(255, 140, 0) !important;
+  stroke: rgb(255, 140, 0);
+  fill: rgb(255, 140, 0);
+  fill-opacity: 0;
+}
 
-}
 .result-color-7 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(30, 144, 255) !important;
+  stroke: rgb(30, 144, 255);
+  fill: rgb(30, 144, 255);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-8 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(240, 128, 128) !important;
+  stroke: rgb(240, 128, 128);
+  fill: rgb(240, 128, 128);
+  fill-opacity: 0;
 }
 
+
+
+
 .result-color-9 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+    color: rgb(144, 238, 144) !important;
+    stroke: rgb(144, 238, 144);
+    fill: rgb(144, 238, 144);
+    fill-opacity: 0;
 }
 
 .result-color-10 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(135, 206, 235) !important;
+  stroke: rgb(135, 206, 235);
+  fill: rgb(135, 206, 235);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-11 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(246, 38, 129) !important;
+  stroke: rgb(246, 38, 129);
+  fill: rgb(246, 38, 129);
+  fill-opacity: 0;
 }
-
 
 .result-color-12 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 69, 0) !important;
+  stroke: rgb(255, 69, 0);
+  fill: rgb(255, 69, 0);
+  fill-opacity: 0;
 }
-
 
 .result-color-13 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(60, 179, 113) !important;
+  stroke: rgb(60, 179, 113);
+  fill: rgb(60, 179, 113);
+  fill-opacity: 0;
 }
 
-
 .result-color-14 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(138, 40, 165) !important;
+  stroke: rgb(138, 40, 165);
+  fill: rgb(138, 40, 165);
+  fill-opacity: 0;
 }
 
 .result-color-15 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(70, 130, 180) !important;
+  stroke: rgb(70, 130, 180);
+  fill: rgb(70, 130, 180);
+  fill-opacity: 0;
 }
 
 .result-color-16 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(208, 32, 144) !important;
+  stroke: rgb(208, 32, 144);
+  fill: rgb(208, 32, 144);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-17 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(220, 20, 60) !important;
+  stroke: rgb(220, 20, 60);
+  fill: rgb(220, 20, 60);
+  fill-opacity: 0;
 }
+
 
 
 .result-color-18 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 223, 60) !important;
+  stroke: rgb(255, 223, 60);
+  fill: rgb(255, 223, 60);
+  fill-opacity: 0;
 }
+
+
 .result-color-19 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(238, 130, 238) !important;
+  stroke: rgb(238, 130, 238);
+  fill: rgb(238, 130, 238);
+  fill-opacity: 0;
 }
-
 
 .result-color-20 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(147, 112, 219) !important;
+  stroke: rgb(147, 112, 219);
+  fill: rgb(147, 112, 219);
+  fill-opacity: 0;
 }
 
+
+
 .result-color-21 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(34, 139, 34) !important;
+  stroke: rgb(34, 139, 34);
+  fill: rgb(34, 139, 34);
+  fill-opacity: 0;
 }
 
 .result-color-22 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(255, 198, 0) !important;
+  stroke: rgb(255, 198, 0);
+  fill: rgb(255, 198, 0);
+  fill-opacity: 0;
 }
+
+
 
 
 .result-color-23 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 99, 71) !important;
+  stroke: rgb(255, 99, 71);
+  fill: rgb(255, 99, 71);
+  fill-opacity: 0;
 }
-
-
 .result-color-24 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(65, 105, 225) !important;
+  stroke: rgb(65, 105, 225);
+  fill: rgb(65, 105, 225);
+  fill-opacity: 0;
 }
-
-
 .result-color-25 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 215, 0) !important;
+  stroke: rgb(255, 215, 0);
+  fill: rgb(255, 215, 0);
+  fill-opacity: 0;
 }
 
 
 .result-color-26 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(0, 206, 209) !important;
+  stroke: rgb(0, 206, 209);
+  fill: rgb(0, 206, 209);
+  fill-opacity: 0;
 }
-
 .result-color-27 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(197, 142, 255) !important;
+  stroke: rgb(197, 142, 255);
+  fill: rgb(197, 142, 255);
+  fill-opacity: 0;
 }
-
 .result-color-28 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(46, 139, 87) !important;
+  stroke: rgb(46, 139, 87);
+  fill: rgb(46, 139, 87);
+  fill-opacity: 0;
 }
-
-
 .result-color-29 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(255, 105, 180) !important;
+  stroke: rgb(255, 105, 180);
+  fill: rgb(255, 105, 180);
+  fill-opacity: 0;
 }
-
-
 .result-color-30 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(255, 165, 0) !important;
+  stroke: rgb(255, 165, 0);
+  fill: rgb(255, 165, 0);
+  fill-opacity: 0;
 }
 .result-color-31 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
+  color: rgb(255, 207, 95) !important;
+  stroke: rgb(255, 207, 95);
+  fill: rgb(255, 207, 95);
+  fill-opacity: 0;
 }
-
-
 .result-color-32 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
+  color: rgb(255, 182, 193) !important;
+  stroke: rgb(255, 182, 193);
+  fill: rgb(255, 182, 193);
+  fill-opacity: 0;
 }
-
 .result-color-33 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
+  color: rgb(102, 205, 170) !important;
+  stroke: rgb(102, 205, 170);
+  fill: rgb(102, 205, 170);
+  fill-opacity: 0;
 }
-
 .result-color-34 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
+  color: rgb(48, 98, 251) !important;
+  stroke: rgb(48, 98, 251);
+  fill: rgb(48, 98, 251);
+  fill-opacity: 0;
 }
-
-
 .result-color-35 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
+  color: rgb(186, 85, 211) !important;
+  stroke: rgb(186, 85, 211);
+  fill: rgb(186, 85, 211);
+  fill-opacity: 0;
 }
-
-
 .result-color-36 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(123, 104, 238) !important;
+  stroke: rgb(123, 104, 238);
+  fill: rgb(123, 104, 238);
+  fill-opacity: 0;
 }
-
-
 .result-color-37 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-38 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-39 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-40 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-41 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-42 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
-}
-.result-color-43 {
-  color: #3062FB !important;
-  stroke: #3062FB;
-  fill: #3062FB;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-44 {
-  color: #F62681 !important;
-stroke: #F62681;
-fill: #F62681;
-fill-opacity: 0.02;
-
-}
-
-.result-color-45 {
-  color: #55d149 !important;
-stroke: #55d149;
-fill: #55d149;
-fill-opacity: 0.02;
-}
-
-.result-color-46 {
-  color: #FFCF5F !important;
-stroke: #FFCF5F;
-fill: #FFCF5F;
-fill-opacity: 0.02;
-}
-
-
-.result-color-47 {
-  color: #900C3F  !important;
-  stroke: #900C3F ;
-  fill: #900C3F ;
-  fill-opacity: 0.02;
-}
-
-
-.result-color-48 {
-  color: #F09710 !important;
-stroke: #F09710;
-fill: #F09710;
-fill-opacity: 0.02;
-
+  color: rgb(0, 128, 128) !important;
+  stroke: rgb(0, 128, 128);
+  fill: rgb(0, 128, 128);
+  fill-opacity: 0;
 }
 
 body, html {
@@ -535,22 +414,47 @@ text {
 }
 
 
-  #searchInput1::placeholder {
-    font-size : 18px; 
-  }
-
-
 
 
 
 .x-cell {
-  position: absolute;
-left: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
 }
 
+.x-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.x-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dark-mode .x-button {
+  background-color: #333333;
+  color: #f2f2f2;
+}
+
+.dark-mode .x-button:hover {
+  background-color: #444444;
+}
 
 td {
     display: flex;
+    align-items: center;
 }
   th {
     font-weight: normal;
@@ -560,267 +464,17 @@ td {
   display: flex;
 }
 
-	
-.button-1 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 15px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-1:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-2 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none !important;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 24px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-2:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-3 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 33px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-3:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-4 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 42px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-4:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-.button-5 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 51px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-5:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-.button-6 {
-  align-items: center;
-  background-color: #F9F9F9;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  color: #121212;
-  cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.52rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 0.4rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .1s,-webkit-box-shadow .1s;
-  white-space: nowrap;
-  border: 0;
-  user-select: none;
-  position: relative;
-  top: 6px;
-   left: 60px;
-width: 55px; 
- 
-  touch-action: manipulation;
-}
-
-.button-6:hover {
-   box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 3px;
-}
-
-
-
-
-.maxcontainer {
-position: absolute;
-    }
-
-
-    .toggle-container2 {
-display: flex;
-align-items: center;
-justify-content: center;
-position: absolute;
-  top: 400px;
-  left: -35.4px;
- width: 120px; 
-    }
 
     img {
-            width: 31px;
-top: -400px;
-pointer-events: none;
-z-index: 40000; 
-left: -953px;
-opacity: .8;
-        }
+    width: 38px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    opacity: 0.64;
+   }
 
 
-        .screenshotcontainer {
-            margin-left: 8px;
-        }
+ 
         
-
-.finalcontainer {
-  width: 100%; 
-}
-.emptycontainer {
-    height: 65px;
-    width: 100%;
-}
-
-
 
 
 
@@ -830,87 +484,44 @@ table {
 margin-top: 0%;
 margin-left: 0%;
   table-layout: auto;
+  margin-left:14px;
  
 }
 
 .similar-table {
-  position: absolute;
-  left: 78px;
-  width: 350px;
+  width: 300px;
   text-align: center;
-
+  margin: 0;
+  flex-grow: 1;
 }
 
-
-#searchInput1 {
-    width: 406px;
-    height: 32px;
-    font-size: 15px;
-    border-radius: 3px;
-    border-width: 0.5px;
-    padding: 1px;
-    padding-left: 5px; /* Adds extra padding on the left side */
-    margin-bottom: 1px;
-    margin-top: 16px;
-        }
-
-
-#searchButton1 {
-  width: 32px;
-color: black !important;
-height: 32px;
-cursor: pointer;
-margin-top: 16px;
-}
 
   
-  
-svg.radar {
-  width: 420px;
-  height: 435px;
-}
 
 
-.searchcontainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-	  margin-left: 8px;
-	
-}
 
 .dark-mode-toggle {
-position: absolute;
-top: 60px;
-    left: 426px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 26.8px;
-    height: 26.8px;
-    background-color: #e0e0de;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--container-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        z-index: 100;
+        transition: background-color 0.3s;
+    }
 
-	
- .button-10 {
-    position: absolute;
-    top: 400px;
-    left: 410px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30.8px;
-    height: 30.8px;
-    border-radius: 50%;
-  background-color: #e0e0de;
-  color: #333;
-  border: 0.1px solid #ccc;
-  cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  }
+/* Removed old button-10 style */
+    
+    .screenshot-button:hover {
+        background-color: #2980b9;
+    }
 
 
 
@@ -956,19 +567,6 @@ body.dark-mode .dark-mode-toggle .toggle-icon::before {
   font-size: 16px; 
 }
 
-body.dark-mode #searchInput1 {
-    color: #000; 
-background-color : #cacaca;
-  }
-	
- body.dark-mode	  #searchInput1::placeholder {
-    color: #363636; 
-  }
-
- body.dark-mode	  #searchButton1 {
-    color: #fff !important; 
-background-color : #333333;
-  }
 
   body.dark-mode button {
   background-color: #333333;
@@ -983,7 +581,174 @@ body.dark-mode button:hover {
   color: initial;
 }
 
+.position-switcher-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 700px;
+    flex-wrap: wrap;
+    padding: 10px 12px;
 
+}
+
+
+.position-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    width: 40px; /* Fixed width for all position buttons */
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.position-link:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.position-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Dark mode styles for position switcher */
+.dark-mode .position-link {
+    border-color: var(--border-color);
+}
+
+.dark-mode .position-link.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Responsive styles for position switcher */
+@media screen and (max-width: 500px) {
+    .position-switcher-container {
+        gap: 8px;
+    }
+    
+    .position-link {
+        padding: 6px 10px;
+        min-width: 36px;
+        width: 45px; /* Slightly smaller fixed width for mobile */
+        font-size: 13px;
+    }
+}
+
+
+#searchInput1 {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        background-color: var(--container-bg);
+        color: var(--text-color);
+        transition: border-color 0.2s;
+        height: 20px;
+        margin-left: 12px;
+        width: 377px;
+        max-width: 100%;
+    }
+
+    #searchInput1:focus {
+        border-color: var(--primary-color);
+    }
+
+    #searchInput1::placeholder {
+        color: #999;
+    }
+
+
+    
+    #searchButton1 {
+        background-color: var(--button-color);
+        color: var(--button-text) !important;
+        border: none;
+        border-radius: 6px;
+        height: 36px;
+        width: 36px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 18px;
+        right: 25px; /* Position from the right edge */
+        align-items: center;  /* Center vertically */
+        justify-content: center;  /* Center horizontally */
+        line-height: 1;  /* Fix line height */
+        padding: 0;  /* Remove any padding */
+    }
+
+
+    #searchButton1:hover {
+        background-color: #2980b9;
+    }
+    body.dark-mode #searchButton1:hover {
+        background-color: #2980b9;
+    }
+
+    body.dark-mode #searchButton1 {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);    }
+
+
+
+svg.radar {
+  height: 391px;
+  width: 391px;
+  display: block; /* Add display block */
+  margin: 0 auto; /* Center the radar chart */
+}
+
+/* Add specific styling for the SVG group */
+svg.radar > g {
+    transform-origin: center;
+    transform: translate(50%, 50%); /* Center the group */
+}
+
+.logo-screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo-screenshot-container img {
+  width: 38px;
+  opacity: 0.64;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+.button-10 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 10px;
+  position: static;
+  flex-shrink: 0;
+}
 </style>
 </defs>
 	
@@ -1007,99 +772,110 @@ body.dark-mode button:hover {
 
 
 <body>
-    <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer">
-        <button class="button-1" role="button">GK</button></a>
-      
-      <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer">
-        <button class="button-2" style="text-decoration: none;" role="button">CB</button></a>
-      
-      <a href="https://datamb.football/appfb/" target="_top" rel="noopener noreferrer">
-        <button class="button-3" role="button">FB</button></a>
-      
-      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer">
-        <button class="button-4" role="button">CM</button></a>
-      
-      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer">
-        <button class="button-5" role="button">FW</button></a>
-      
-      <a href="https://datamb.football/appst/" target="_top" rel="noopener noreferrer">
-        <button class="button-6" role="button">ST</button></a>
-  <div class="searchcontainer">
-    <input type="text" id="searchInput1" class="search-bar" placeholder="Enter fullback name..." />
-    &nbsp;<input type="button" id="searchButton1" value="+&nbsp;" />
-    <div class="dark-mode-toggle" onclick="toggleDarkMode()"><div class="toggle-icon"></div></div></div>
-    <div class="screenshotcontainer">
-      <div id="matchingNames"></div>
-	<div id="resultsTable"></div>  
-  <div class="maxcontainer">
-  <div class="toggle-container2">
-    <img src="https://datamb.football/logo.png" alt="Logo">
-  </div>
-  <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
-
-  </div>
-
-
-  <svg class="radar"><g transform="translate(223,225.77)"><g class="axisWrapper">
-    <g class="radar_label">
-        <text class="label" data-type="Aerial%" data-idx="0" transform="translate(-35.60 -154.8) rotate(-3.4)">Aerial%</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Long%" data-idx="6" transform="matrix(0.5, -0.86, 0.86, 0.5, -140.96, -74.54) rotate(5.5)">Duel%</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Passes" data-idx="5" transform="matrix(-0.38, -0.93, 0.93, -0.38, -138.23, 90.82) rotate(3.87)">Def Actions</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Exits" data-idx="4" transform="translate(-96.53 145.35) rotate(19.3)">Prog Passes</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Aerial" data-idx="3" transform="translate(60.06 160) rotate(-28.32)">xAssist</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Def Actions" data-idx="2" transform="translate(161.70 8.45) rotate(100.11)">Cross%</text>
-    </g>
-    
-    <g class="radar_label">
-        <text class="label" data-type="Shotstopping" data-idx="1" transform="translate(97.10 -130.22) rotate(50.09)">Carrying</text>
-    </g>
-    
-    
-  
-  
-  <circle class="blackCircle" r="150" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
-  <circle class="gridCircle" r="150" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="128" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="90" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="60" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
-  <circle class="gridCircle" r="30" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle></g>
-                                  
-    
+  <div class="screenshotcontainer">
+    <div class="position-switcher-container">
+      <a href="https://datamb.football/appgk/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>GK</span>
+      </a>
    
-  <line x1="0" y1="0" x2="7.37" y2="149.57" stroke="#D3D3D3" stroke-width="1" transform="translate(-7.36, -149.8)"></line>
-  <line x1="0" y1="0" x2="-112.26" y2="99.60" stroke="#D3D3D3" stroke-width="1" transform="translate(112.11, -99.6)"></line>
-  <line x1="0" y1="0" x2="-147.68" y2="-25.48" stroke="#D3D3D3" stroke-width="1" transform="translate(147.82, 25.44)"></line>
-  <line x1="0" y1="0" x2="-72.34" y2="-131.68" stroke="#D3D3D3" stroke-width="1" transform="translate(72.34, 131.4)"></line>
-  <line x1="0" y1="0" x2="57.50" y2="-138.88" stroke="#D3D3D3" stroke-width="1" transform="translate(-57.53, 138.51)"></line>
-  <line x1="0" y1="0" x2="144.16" y2="-41.52" stroke="#D3D3D3" stroke-width="1" transform="translate(-144.14, 41.48)"></line>
-  <line x1="0" y1="0" x2="122.14" y2="86.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-122.357, -86.768)"></line>
-  
-  
-  
-  <g class="radarWrapper"></g>
-  </g></g>    
-  <div id="insertHere"></div>
-</div>
+
+      <a href="https://datamb.football/appcb/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CB</span>
+      </a>
+      <span class="position-link active" style="user-select: none;">
+        <span>FB</span>
+    </span>
+      
+      <a href="https://datamb.football/appcm/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>CM</span>
+      </a>
+      <a href="https://datamb.football/appfw/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>FW</span>
+      </a>
+      <a href="https://datamb.football/appst/" target="_top" rel="noopener noreferrer" class="position-link">
+          <span>ST</span>
+      </a>
+    </div>
+
+    <div class="search-container">
+      <div class="search-controls">
+        <input type="text" id="searchInput1" class="search-bar" data-i18n="search.placeholder2" placeholder="Enter fullback name..." />
+        <button id="searchButton1">+</button>
+      </div>
+      <div id="matchingNames"></div>
+    </div>
+
+    <div id="resultsTable"></div>
+    
+    <div class="radar-container" style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+      <svg class="radar">
+        <g transform="translate(0,0)"><g class="axisWrapper">
+
+            <g class="radar_label">
+                <text class="label" data-type="Aerial%" data-idx="0" transform="translate(-39 -170) rotate(-3.4)">Aerial%</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Long%" data-idx="6" transform="matrix(0.5, -0.86, 0.86, 0.5, -155, -82) rotate(5.5)">Duel%</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Passes" data-idx="5" transform="matrix(-0.38, -0.93, 0.93, -0.38, -152, 100) rotate(3.87)">Def Actions</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Exits" data-idx="4" transform="translate(-106 160) rotate(19.3)">Prog Passes</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Aerial" data-idx="3" transform="translate(66 176) rotate(-28.32)">xAssist</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Def Actions" data-idx="2" transform="translate(178 9.3) rotate(100.11)">Cross%</text>
+            </g>
+            
+            <g class="radar_label">
+                <text class="label" data-type="Shotstopping" data-idx="1" transform="translate(107 -143) rotate(50.09)">Carrying</text>
+            </g>
+
+
+<circle class="blackCircle" r="165" style="fill:none; stroke:#D3D3D3; stroke-width:1;"></circle>
+<circle class="gridCircle" r="165" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="139" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="104" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="70" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+<circle class="gridCircle" r="35" style="fill: rgb(16, 135, 188); fill-opacity: 0.03;"></circle>
+
+
+<line x1="0" y1="0" x2="8.11" y2="164.74" stroke="#D3D3D3" stroke-width="1" transform="translate(-8.11, -164.74)"></line>
+<line x1="0" y1="0" x2="-123.52" y2="109.77" stroke="#D3D3D3" stroke-width="1" transform="translate(123.25, -109.77)"></line>
+<line x1="0" y1="0" x2="-162.88" y2="-28.1" stroke="#D3D3D3" stroke-width="1" transform="translate(163.09, 28.04)"></line>
+<line x1="0" y1="0" x2="-79.86" y2="-145.15" stroke="#D3D3D3" stroke-width="1" transform="translate(79.86, 144.53)"></line>
+<line x1="0" y1="0" x2="63.48" y2="-152.91" stroke="#D3D3D3" stroke-width="1" transform="translate(-63.48, 152.47)"></line>
+<line x1="0" y1="0" x2="158.9" y2="-45.8" stroke="#D3D3D3" stroke-width="1" transform="translate(-158.89, 45.63)"></line>
+<line x1="0" y1="0" x2="134.5" y2="95.58" stroke="#D3D3D3" stroke-width="1" transform="translate(-134.51, -95.67)"></line>
+
+
+<g class="radarWrapper"></g>
+</g></g>
+      </svg>
+    </div>
+    
+    <div class="logo-screenshot-container">
+      <img src="https://datamb.football/logo.png" alt="Logo">
+      <div id="similarPlayersContainer"></div>
+      <button onclick="takeScreenshot()" class="button-10"><div class="icon2"></div></button>
+    </div>
+    
+    <div id="insertHere"></div>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+      <div class="toggle-icon"></div>
 
 <script>
-   
+ 
 
-  const allData1 = [];
+ const allData1 = [];
   const allData2 = [];
   let allDataAsString = '';
   
@@ -1116,45 +892,681 @@ const urls2 = [
 
 ];
 	
-const _0x33cf63=_0x34ed;function _0x34ed(_0x173295,_0x6f8e18){const _0x18f3a1=_0x18f3();return _0x34ed=function(_0x34edf9,_0x11dc06){_0x34edf9=_0x34edf9-0x8f;let _0x54d8e1=_0x18f3a1[_0x34edf9];return _0x54d8e1;},_0x34ed(_0x173295,_0x6f8e18);}(function(_0x3e0a20,_0x427e2e){const _0x577d2b=_0x34ed,_0x1727f9=_0x3e0a20();while(!![]){try{const _0x137d3e=-parseInt(_0x577d2b(0x102))/0x1*(-parseInt(_0x577d2b(0x11b))/0x2)+-parseInt(_0x577d2b(0xe9))/0x3*(parseInt(_0x577d2b(0x10f))/0x4)+parseInt(_0x577d2b(0xb6))/0x5*(-parseInt(_0x577d2b(0x101))/0x6)+-parseInt(_0x577d2b(0x9c))/0x7+-parseInt(_0x577d2b(0x133))/0x8+-parseInt(_0x577d2b(0xf5))/0x9*(-parseInt(_0x577d2b(0x118))/0xa)+parseInt(_0x577d2b(0xe5))/0xb;if(_0x137d3e===_0x427e2e)break;else _0x1727f9['push'](_0x1727f9['shift']());}catch(_0x34fd2b){_0x1727f9['push'](_0x1727f9['shift']());}}}(_0x18f3,0xde579));const fetchPromises1=urls1[_0x33cf63(0x136)](_0x8ead6c=>fetch(_0x8ead6c)[_0x33cf63(0x103)](_0x5d3793=>_0x5d3793[_0x33cf63(0x90)]())),fetchPromises2=urls2[_0x33cf63(0x136)](_0x352a3f=>fetch(_0x352a3f)['then'](_0x4fefaf=>_0x4fefaf[_0x33cf63(0x90)]()));function _0x18f3(){const _0x36cafc=['radarPolygon\x20','result-color-40','9999','result-color-41','result-color-34','remove','pointer','sort','.radarLines.','autocomplete','SheetNames','div','firstChild','result-color-13','slice','concat','radarLines\x20','result-color-43','error','9020335GaDEIA','267px','startsWith','dispatchEvent','padding','unshift','class','indexOf','result-color-bleu','Similar\x20data\x20to\x20','transform','result-color-21','sheet_to_json','off','textContent','sqrt','add','utils','push','result-color-31','toFixed','fontFamily','read','fillOpacity','result-color-37','maxHeight','find','createElement','stroke-width','innerHTML','border',')\x20-\x20','listStyleType','team','result-color-18','Backspace','result-color-46','createElementNS','Arial,\x20sans-serif','result-color-1','array','fill','radarCircle\x20','position','difference','9px','.metrics-table\x20tr:not(:first-child)','37781029KholXg','translate(223,225.77)','result-color-42','none','6567futTwe','keyup','1.9px','result-color-19','includes','resultsTable','10.8px','result-color-4','.fullName','querySelector','setAttribute','Enter','702WOHslv','zIndex','appendChild','result-color-24','input','result-color-2','toLowerCase','trim','result-color-15','result-color-26','querySelectorAll','td:first-child','6lTeNEz','5qPYgMQ','then','join','auto','result-color-35','result-color-39','cos','table','click','addEventListener','value','insertHere','NFD','552WArsgK','result-color-7','result-color-48','result-color-9','result-color-green','textDecoration','replace','\x20min','fullName','224670bpdXNR','searchButton1','.radarPolygon.','60364PzIIHA','length','result-color-12','result-color-23','similarPlayersContainer','result-color-10','searchInput1','.radarCircle.','0.86','key','similar-table','8px','points','has','result-color-45','filter','all','substring','catch','result-color-rose','normalize','forEach','block','target','11515856ejqgPM','display','from','map','Error\x20fetching\x20or\x20processing\x20data:','age','arrayBuffer','.name','style','http://www.w3.org/2000/svg','matchingNames','underline','result-color-11','Sheets','getElementById','result-color-30','result-color-38','result-color-29','6171417LztMZb','searchButton','span','classList','split','sin','closest'];_0x18f3=function(){return _0x36cafc;};return _0x18f3();}function processAndStoreData1(_0x282e5e){const _0x10278c=_0x33cf63;let _0xb319ef=0x1;_0x282e5e[_0x10278c(0x130)](_0x5ce1f2=>{const _0x31d80a=_0x10278c,_0x95822=XLSX[_0x31d80a(0xcc)](new Uint8Array(_0x5ce1f2),{'type':_0x31d80a(0xde)}),_0x34db35=_0x95822[_0x31d80a(0xad)][0x0],_0x480bb2=_0x95822['Sheets'][_0x34db35],_0x15e272=XLSX[_0x31d80a(0xc7)]['sheet_to_json'](_0x480bb2,{'header':0x1}),_0x118868=_0x15e272['slice'](0x1);_0x118868['forEach'](_0x560321=>{const _0x2a18bb=_0x31d80a;_0x560321['unshift'](''+_0xb319ef++),_0x560321[0xf]=_0x560321[0x1]+'\x2023/24';const _0x59cffa=[_0x560321[0x0],_0x560321[0xf],_0x560321[0x2],_0x560321[0x3],_0x560321[0x8],_0x560321[0xa],_0x560321[0xb],_0x560321[0x5],_0x560321[0x6],_0x560321[0x7],_0x560321[0x9],_0x560321[0x4]];allData1[_0x2a18bb(0xc8)](_0x59cffa);});});const _0x595435=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x5262c8=_0x595435['map'](_0x4ce3b1=>allData1[_0x10278c(0x136)](_0x55a138=>parseFloat(_0x55a138[_0x4ce3b1]))),_0x597631=_0x5262c8[_0x10278c(0x136)](_0x3da390=>{const _0x331491=_0x10278c,_0x450daf=[..._0x3da390][_0x331491(0xaa)]((_0x153b1b,_0xa9f83e)=>_0x153b1b-_0xa9f83e);return _0x3da390[_0x331491(0x136)](_0x5240d4=>{const _0x35b532=_0x331491,_0x58286e=_0x450daf[_0x35b532(0xbd)](_0x5240d4)+0x1;return _0x58286e/_0x450daf[_0x35b532(0x11c)];});});allData1['forEach']((_0x47710f,_0x50e243)=>{_0x595435['forEach']((_0x243548,_0xb8d54a)=>{const _0x3941c3=_0x34ed;_0x47710f[_0x243548]=_0x597631[_0xb8d54a][_0x50e243][_0x3941c3(0xca)](0x3);});});}function processAndStoreData(_0x189133){const _0x133b8a=_0x33cf63;let _0x2b3f31=0x1;_0x189133['forEach'](_0x17701d=>{const _0x2f5dc7=_0x34ed,_0x28f51a=XLSX[_0x2f5dc7(0xcc)](new Uint8Array(_0x17701d),{'type':'array'}),_0x26aff2=_0x28f51a[_0x2f5dc7(0xad)][0x0],_0x309546=_0x28f51a[_0x2f5dc7(0x97)][_0x26aff2],_0x307708=XLSX['utils'][_0x2f5dc7(0xc2)](_0x309546,{'header':0x1}),_0x3ea03b=_0x307708[_0x2f5dc7(0xb1)](0x1);_0x3ea03b[_0x2f5dc7(0x130)](_0x5464a6=>{const _0xd5c9eb=_0x2f5dc7;_0x5464a6[_0xd5c9eb(0xbb)](''+_0x2b3f31++),_0x5464a6[0xf]=_0x5464a6[0x1]+'\x2024/25';const _0x1aab9e=[_0x5464a6[0x0],_0x5464a6[0xf],_0x5464a6[0x2],_0x5464a6[0x3],_0x5464a6[0x8],_0x5464a6[0xa],_0x5464a6[0xb],_0x5464a6[0x5],_0x5464a6[0x6],_0x5464a6[0x7],_0x5464a6[0x9],_0x5464a6[0x4]];allData2[_0xd5c9eb(0xc8)](_0x1aab9e);});});const _0x430a88=[0x4,0x5,0x6,0x7,0x8,0x9,0xa],_0x3371fd=_0x430a88[_0x133b8a(0x136)](_0x5df263=>allData2[_0x133b8a(0x136)](_0x40c68c=>parseFloat(_0x40c68c[_0x5df263]))),_0x51f5b9=_0x3371fd[_0x133b8a(0x136)](_0xfd51c0=>{const _0x545fe7=_0x133b8a,_0x4caae8=[..._0xfd51c0][_0x545fe7(0xaa)]((_0x4d6591,_0x44d938)=>_0x4d6591-_0x44d938);return _0xfd51c0[_0x545fe7(0x136)](_0x2a58bd=>{const _0x5c4136=_0x545fe7,_0x8caee7=_0x4caae8[_0x5c4136(0xbd)](_0x2a58bd)+0x1;return _0x8caee7/_0x4caae8[_0x5c4136(0x11c)];});});allData2[_0x133b8a(0x130)]((_0x5c69bd,_0x5da4ca)=>{const _0x51435c=_0x133b8a;_0x430a88[_0x51435c(0x130)]((_0x6c19c6,_0x268a73)=>{const _0x3973c0=_0x51435c;_0x5c69bd[_0x6c19c6]=_0x51f5b9[_0x268a73][_0x5da4ca][_0x3973c0(0xca)](0x3);});});}Promise[_0x33cf63(0x12b)](fetchPromises1)[_0x33cf63(0x103)](_0x844642=>{const _0x552355=_0x33cf63;processAndStoreData(_0x844642),Promise[_0x552355(0x12b)](fetchPromises2)[_0x552355(0x103)](_0x43538c=>{const _0xe3708d=_0x552355;processAndStoreData1(_0x43538c);const _0xd3179c=allData2[_0xe3708d(0xb2)](allData1);_0xd3179c['forEach']((_0x3798c1,_0x469145)=>{_0x3798c1[0x0]=''+(_0x469145+0x1);}),_0xd3179c['forEach'](_0x47ea23=>{const _0x2099f0=_0xe3708d;allDataAsString+=_0x47ea23[_0x2099f0(0x104)](',')+'\x0a';});const _0x9d60be=allDataAsString[_0xe3708d(0xfc)]()[_0xe3708d(0xa0)]('\x0a'),_0x4d3b61=[];for(const _0x4ad71a of _0x9d60be){const _0x453ec0=_0x4ad71a[_0xe3708d(0xa0)](','),_0x27ec39=_0x453ec0[0x1],_0x5909cf=_0x453ec0[0x3],_0x1a08d1=_0x453ec0[0x2],_0x430079=_0x27ec39+','+_0x5909cf+','+_0x1a08d1;_0x4d3b61[_0xe3708d(0xc8)](_0x430079);}const _0x2c60dd=_0x4d3b61,_0x7ed9e7=document[_0xe3708d(0x98)](_0xe3708d(0x121));_0x7ed9e7['setAttribute'](_0xe3708d(0xac),_0xe3708d(0xc3));const _0x2f6aec=document[_0xe3708d(0x98)](_0xe3708d(0x94)),_0x235f46=document[_0xe3708d(0x98)](_0xe3708d(0x9d));function _0x388da7(){const _0x130204=_0xe3708d,_0x408284=_0x489274(_0x7ed9e7[_0x130204(0x10c)][_0x130204(0xfb)]()),_0x53d1c4=_0x2c60dd[_0x130204(0x12a)](function(_0x2b359c){const _0x3b037e=_0x130204,[_0x326bbb]=_0x2b359c['split'](','),_0x13600f=_0x489274(_0x326bbb[_0x3b037e(0xfb)]());return _0x13600f[_0x3b037e(0xed)](_0x408284);});_0x2f6aec[_0x130204(0xd3)]='',_0x53d1c4[_0x130204(0x130)](function(_0x427afc){const _0x15b114=_0x130204,[_0xb2ffe,_0x28547e,_0x1b0b63]=_0x427afc['split'](','),_0xf107ab=document[_0x15b114(0xd1)](_0x15b114(0xae));_0xf107ab[_0x15b114(0x9f)][_0x15b114(0xc6)]('name');const _0x1bee85=document[_0x15b114(0xd1)](_0x15b114(0x9e));_0x1bee85['textContent']=_0xb2ffe,_0x1bee85['classList'][_0x15b114(0xc6)](_0x15b114(0x117)),_0xf107ab[_0x15b114(0xf7)](_0x1bee85);const _0x7f7992=document[_0x15b114(0xd1)](_0x15b114(0x9e));_0x7f7992[_0x15b114(0xc4)]='\x20('+_0x1b0b63+',',_0x7f7992[_0x15b114(0x9f)][_0x15b114(0xc6)](_0x15b114(0x8f)),_0xf107ab[_0x15b114(0xf7)](_0x7f7992);const _0x5a58f9=document['createElement']('span');_0x5a58f9[_0x15b114(0xc4)]='\x20'+_0x28547e+')',_0x5a58f9[_0x15b114(0x9f)]['add'](_0x15b114(0xd7)),_0xf107ab[_0x15b114(0xf7)](_0x5a58f9),_0xf107ab[_0x15b114(0x10b)]('click',function(_0x4404b9){const _0x1a0d02=_0x15b114,_0x4d45b3=_0x4404b9[_0x1a0d02(0x132)][_0x1a0d02(0xa2)](_0x1a0d02(0x91));if(_0x4d45b3){const _0x1a485f=_0x4d45b3[_0x1a0d02(0xf2)](_0x1a0d02(0xf1))[_0x1a0d02(0xc4)],_0x51e1dc=_0x4d45b3[_0x1a0d02(0xf2)]('.age')[_0x1a0d02(0xc4)][_0x1a0d02(0xfc)](),_0x5efa1e=_0x4d45b3[_0x1a0d02(0xf2)]('.team')[_0x1a0d02(0xc4)][_0x1a0d02(0xfc)]()[_0x1a0d02(0x12f)]('NFD')['replace'](/[\u0300-\u036f\s]/g,'')[_0x1a0d02(0x115)](/[^a-zA-Z]/g,''),_0x17fdcc=_0x1a485f+','+_0x5efa1e+','+_0x51e1dc[_0x1a0d02(0x12c)](0x1,_0x51e1dc[_0x1a0d02(0x11c)]-0x1);_0x7ed9e7[_0x1a0d02(0x10c)]=_0x17fdcc;const _0x3a517c=new KeyboardEvent(_0x1a0d02(0xea),{'key':_0x1a0d02(0xf4)});_0x7ed9e7[_0x1a0d02(0xb9)](_0x3a517c);}}),_0x2f6aec[_0x15b114(0xf7)](_0xf107ab);}),_0x408284===''&&_0x53d1c4[_0x130204(0x11c)]===0x0?_0x2f6aec[_0x130204(0x92)][_0x130204(0x134)]='none':(_0x2f6aec[_0x130204(0x92)][_0x130204(0x134)]=_0x130204(0x131),_0x2f6aec[_0x130204(0x92)][_0x130204(0xba)]=_0x130204(0x126),_0x2f6aec['style'][_0x130204(0xe1)]='relative',_0x2f6aec['style']['left']=_0x130204(0xeb),_0x2f6aec[_0x130204(0x92)][_0x130204(0xf6)]=_0x130204(0xa5),_0x2f6aec[_0x130204(0x92)]['width']='392px',_0x2f6aec[_0x130204(0x92)][_0x130204(0xcf)]=_0x130204(0xb7),_0x2f6aec['style']['overflowY']=_0x130204(0x105),_0x2f6aec[_0x130204(0x92)][_0x130204(0xd4)]='1px\x20solid\x20#e0e0e0'),_0x408284===''&&(_0x2f6aec[_0x130204(0x92)][_0x130204(0x134)]='none');}_0x7ed9e7[_0xe3708d(0x10b)](_0xe3708d(0xf9),_0x388da7),_0x7ed9e7[_0xe3708d(0x10b)]('keyup',function(_0x43c479){const _0x4138be=_0xe3708d;if(_0x43c479[_0x4138be(0x124)]===_0x4138be(0xf4))searchButton1['click']();else _0x43c479[_0x4138be(0x124)]===_0x4138be(0xd9)&&_0x388da7();});const _0x449029=allDataAsString;let _0x39bec0=_0x449029[_0xe3708d(0xfc)]()['split']('\x0a')[_0xe3708d(0x136)](_0x4e5885=>_0x4e5885['split'](','));function _0xe3f55b(_0xd21eeb,_0x259db4){const _0x3c416f=_0xe3708d;let _0x1c4d93=0x0;for(let _0x5d68b8=0x4;_0x5d68b8<=0xa;_0x5d68b8++){const _0x509d2c=parseFloat(_0xd21eeb[_0x5d68b8]),_0x3b5053=parseFloat(_0x259db4[_0x5d68b8]);_0x1c4d93+=Math['pow'](_0x509d2c-_0x3b5053,0x2);}return Math[_0x3c416f(0xc5)](_0x1c4d93);}const _0x28806a=['result-color-blue','result-color-pink','result-color-orange',_0xe3708d(0x113),_0xe3708d(0xbe),_0xe3708d(0x12e),_0xe3708d(0xdd),_0xe3708d(0xfa),'result-color-3',_0xe3708d(0xf0),'result-color-5','result-color-6',_0xe3708d(0x110),'result-color-8',_0xe3708d(0x112),_0xe3708d(0x120),_0xe3708d(0x96),_0xe3708d(0x11d),_0xe3708d(0xb0),'result-color-14',_0xe3708d(0xfd),'result-color-16','result-color-17',_0xe3708d(0xd8),_0xe3708d(0xec),'result-color-20',_0xe3708d(0xc1),'result-color-22',_0xe3708d(0x11e),_0xe3708d(0xf8),'result-color-25',_0xe3708d(0xfe),'result-color-27','result-color-28',_0xe3708d(0x9b),_0xe3708d(0x99),_0xe3708d(0xc9),'result-color-32','result-color-33',_0xe3708d(0xa7),_0xe3708d(0x106),'result-color-36',_0xe3708d(0xce),_0xe3708d(0x9a),_0xe3708d(0x107),_0xe3708d(0xa4),_0xe3708d(0xa6),_0xe3708d(0xe7),_0xe3708d(0xb4),'result-color-44',_0xe3708d(0x129),_0xe3708d(0xda),'result-color-47',_0xe3708d(0x111)];let _0x727f2=[];function _0x489274(_0x1b79e8){const _0x483655=_0xe3708d;return _0x1b79e8['normalize'](_0x483655(0x10e))[_0x483655(0x115)](/[\u0300-\u036f\s]/g,'')['replace'](/Ø/g,'O')['replace'](/ø/g,'o')['replace'](/ı/g,'i');}function _0x5e09f0(_0x2554e4){const _0x547cb9=_0xe3708d,_0x2c2043=_0x2554e4[_0x547cb9(0xa0)](',')[_0x547cb9(0x136)](_0x4944e7=>_0x4944e7[_0x547cb9(0xfc)]()),_0xbc5043=_0x2c2043[0x0];let _0x506a2d,_0x562fb1;_0x2c2043[_0x547cb9(0x11c)]>0x1&&(_0x506a2d=_0x2c2043[0x1]['trim'](),_0x2c2043[_0x547cb9(0x11c)]>0x2&&(_0x562fb1=_0x2c2043[0x2][_0x547cb9(0xfc)]()));const _0xf78c7e=_0x39bec0[_0x547cb9(0x12a)](_0x444cfb=>{const _0x36d550=_0x547cb9,_0x3d9023=_0x489274(_0x444cfb[0x1][_0x36d550(0xfb)]()),_0x1e3988=_0x489274(_0x444cfb[0x2][_0x36d550(0xfb)]()),_0x27e81a=_0x444cfb[0x3][_0x36d550(0xfc)]()['toLowerCase'](),_0x3924cb=_0x3d9023['includes'](_0x489274(_0xbc5043[_0x36d550(0xfb)]())),_0x3aaf5f=!_0x506a2d||_0x27e81a===_0x489274(_0x506a2d[_0x36d550(0xfb)]()),_0x30df0e=!_0x562fb1||_0x1e3988===_0x489274(_0x562fb1['toLowerCase']());return _0x3924cb&&_0x3aaf5f&&_0x30df0e;});return _0xf78c7e;}function _0x5910bc(_0x593320,_0x5574da,_0x37291d){const _0x2c6bfb=_0xe3708d,_0x316efd=document['getElementById'](_0x2c6bfb(0xee)),_0x51319c=[],_0x286d21=_0x316efd[_0x2c6bfb(0xf2)]('th')!==null,_0x543b56=_0x286d21?_0x316efd['querySelector'](_0x2c6bfb(0x109)):document[_0x2c6bfb(0xd1)](_0x2c6bfb(0x109));_0x543b56[_0x2c6bfb(0x9f)]['add']('metrics-table');if(!_0x286d21){const _0x1e9a82=document[_0x2c6bfb(0xd1)]('tr');for(let _0x3bf9cc=0x1;_0x3bf9cc<_0x51319c['length'];_0x3bf9cc++){const _0x150f7d=document[_0x2c6bfb(0xd1)]('th');_0x150f7d[_0x2c6bfb(0xc4)]=_0x51319c[_0x3bf9cc],_0x1e9a82[_0x2c6bfb(0xf7)](_0x150f7d);}const _0x543d33=document[_0x2c6bfb(0xd1)]('th');_0x543d33[_0x2c6bfb(0xc4)]='',_0x1e9a82['appendChild'](_0x543d33),_0x543b56[_0x2c6bfb(0xf7)](_0x1e9a82);}const _0x4d39f7=_0x39bec0[_0x5574da],_0x501131=document[_0x2c6bfb(0xd1)]('tr');for(let _0x5e9c01=0x1;_0x5e9c01<=0xb;_0x5e9c01++){if(_0x5e9c01===0x1||_0x5e9c01===0x2||_0x5e9c01===0x3||_0x5e9c01===0xb){const _0x4a7191=document[_0x2c6bfb(0xd1)]('td');_0x5e9c01===0xb?_0x4a7191[_0x2c6bfb(0xc4)]=_0x4d39f7[_0x5e9c01]+_0x2c6bfb(0x116):_0x4a7191[_0x2c6bfb(0xc4)]=_0x4d39f7[_0x5e9c01]+',',_0x4a7191['classList']['add'](_0x37291d),_0x501131[_0x2c6bfb(0xf7)](_0x4a7191);}}const _0x5dbde1=document['createElement']('td'),_0x44f493=document[_0x2c6bfb(0xd1)]('button');_0x44f493['textContent']='x',_0x44f493[_0x2c6bfb(0x9f)][_0x2c6bfb(0xc6)]('x-button'),_0x5dbde1[_0x2c6bfb(0x9f)][_0x2c6bfb(0xc6)]('x-cell'),_0x44f493[_0x2c6bfb(0x10b)]('click',function(){const _0x4dd419=_0x2c6bfb;_0x501131[_0x4dd419(0xa8)]();const _0x5b2aa4=document[_0x4dd419(0xff)](_0x4dd419(0x11a)+_0x37291d),_0x316969=document[_0x4dd419(0xff)](_0x4dd419(0xab)+_0x37291d),_0x1578ea=document[_0x4dd419(0xff)](_0x4dd419(0x122)+_0x37291d);_0x5b2aa4[_0x4dd419(0x130)](_0x38a224=>_0x38a224[_0x4dd419(0xa8)]()),_0x316969[_0x4dd419(0x130)](_0x53a08d=>_0x53a08d['remove']()),_0x1578ea[_0x4dd419(0x130)](_0x3330e9=>_0x3330e9[_0x4dd419(0xa8)]());const _0x2e9b83=document['querySelectorAll'](_0x4dd419(0xe4));if(_0x2e9b83[_0x4dd419(0x11c)]>0x0){const _0x5211d7=_0x2e9b83[_0x2e9b83[_0x4dd419(0x11c)]-0x1],_0x5f3769=_0x5211d7[_0x4dd419(0xaf)]['textContent'][_0x4dd419(0xa0)](',')[0x0],_0x3f834e=_0x39bec0['find'](_0x103480=>_0x103480[0x1]===_0x5f3769);_0x3f834e&&_0x35dcc9(_0x3f834e);}else{const _0x521097=document['getElementById'](_0x4dd419(0x11f));_0x521097&&(_0x521097[_0x4dd419(0xd3)]='');}}),_0x5dbde1[_0x2c6bfb(0xf7)](_0x44f493),_0x501131[_0x2c6bfb(0xf7)](_0x5dbde1),_0x543b56[_0x2c6bfb(0xf7)](_0x501131);!_0x286d21&&_0x316efd[_0x2c6bfb(0xf7)](_0x543b56);const _0x1106fb=_0x39bec0[_0x5574da][_0x2c6bfb(0x104)](',\x20'),_0x382a88=0x96,_0x4ed55a=[0x0,0x0],_0x384859=[0x0,0x2*Math['PI']/0x7,0x4*Math['PI']/0x7,0x6*Math['PI']/0x7,0x8*Math['PI']/0x7,0xa*Math['PI']/0x7,0xc*Math['PI']/0x7];function _0x143ba4(_0x16efb5,_0x156245){const _0x43be35=_0x2c6bfb;let _0x3cdac3=_0x384859[_0x16efb5-0x1];_0x3cdac3+=0x2*Math['PI']/0x7*0.2;const _0x1b554c=0x96*_0x156245*Math[_0x43be35(0x108)](_0x3cdac3),_0x334ad7=0x96*_0x156245*Math[_0x43be35(0xa1)](_0x3cdac3);return{'x':_0x1b554c,'y':_0x334ad7};}const _0x2eac16=document[_0x2c6bfb(0xf2)]('.radar'),_0x2cb31c=_0x2eac16['appendChild'](document['createElementNS']('http://www.w3.org/2000/svg','g'));_0x2cb31c[_0x2c6bfb(0xf3)](_0x2c6bfb(0xc0),_0x2c6bfb(0xe6)),_0x2cb31c['innerHTML']='';const _0x8fbd0f=[],_0x540d2b=_0x1106fb[_0x2c6bfb(0xa0)](',');for(let _0x1215aa=0x4;_0x1215aa<0xb;_0x1215aa++){_0x8fbd0f[_0x2c6bfb(0xc8)]({'axis':_0x1215aa-0x3,'value':parseFloat(_0x540d2b[_0x1215aa])});}const _0xdb33bd=_0x8fbd0f[_0x2c6bfb(0x136)](({axis:_0x4e2d1d,value:_0x4db44c})=>{const {x:_0x522a05,y:_0x15f925}=_0x143ba4(_0x4e2d1d,_0x4db44c);return _0x522a05+','+_0x15f925;})['join']('\x20'),_0x178bfc=document[_0x2c6bfb(0xdb)](_0x2c6bfb(0x93),'polyline');_0x178bfc[_0x2c6bfb(0xf3)]('class',_0x2c6bfb(0xb3)+_0x37291d),_0x178bfc[_0x2c6bfb(0xf3)]('points',_0xdb33bd+'\x20'+_0xdb33bd[_0x2c6bfb(0xa0)]('\x20')[0x0]),_0x178bfc[_0x2c6bfb(0xf3)](_0x2c6bfb(0xd2),'3'),_0x178bfc[_0x2c6bfb(0xf3)](_0x2c6bfb(0xdf),_0x2c6bfb(0xe8)),_0x2cb31c[_0x2c6bfb(0xf7)](_0x178bfc);const _0x3616be=document[_0x2c6bfb(0xdb)](_0x2c6bfb(0x93),'polygon');_0x3616be['setAttribute'](_0x2c6bfb(0xbc),_0x2c6bfb(0xa3)+_0x37291d),_0x3616be[_0x2c6bfb(0xf3)](_0x2c6bfb(0x127),_0xdb33bd),_0x3616be['style'][_0x2c6bfb(0xcd)]='0.2',_0x2cb31c[_0x2c6bfb(0xf7)](_0x3616be),_0x8fbd0f[_0x2c6bfb(0x130)](({axis:_0x138297,value:_0x1bf73a})=>{const _0x54a102=_0x2c6bfb,{x:_0x5cc2b6,y:_0x1938ff}=_0x143ba4(_0x138297,_0x1bf73a),_0xa8af64=document[_0x54a102(0xdb)](_0x54a102(0x93),'circle');_0xa8af64[_0x54a102(0xf3)]('class',_0x54a102(0xe0)+_0x37291d),_0xa8af64[_0x54a102(0x92)][_0x54a102(0xcd)]=_0x54a102(0x123),_0xa8af64[_0x54a102(0xf3)]('r','6'),_0xa8af64[_0x54a102(0xf3)]('cx',_0x5cc2b6),_0xa8af64[_0x54a102(0xf3)]('cy',_0x1938ff),_0x2cb31c[_0x54a102(0xf7)](_0xa8af64);});}function _0x9173df(){const _0x4ac7e6=_0xe3708d,_0x14fd13=document['getElementById'](_0x4ac7e6(0x121)),_0x14a370=document['getElementById']('searchButton1'),_0x4bec92=document[_0x4ac7e6(0x98)](_0x4ac7e6(0xee)),_0x4a8156=new Set(),_0xeedc9d=document['createElement']('ul');_0xeedc9d['style'][_0x4ac7e6(0xcb)]=_0x4ac7e6(0xdc),_0xeedc9d[_0x4ac7e6(0x92)][_0x4ac7e6(0xd6)]=_0x4ac7e6(0xe8),_0xeedc9d[_0x4ac7e6(0x92)]['paddingLeft']=_0x4ac7e6(0xe3),_0x4bec92[_0x4ac7e6(0xf7)](_0xeedc9d);let _0x3401de=0x0;_0x14a370[_0x4ac7e6(0x10b)](_0x4ac7e6(0x10a),function(){const _0x32a9ba=_0x4ac7e6,_0x34bee9=_0x14fd13[_0x32a9ba(0x10c)],_0x5144f9=_0x5e09f0(_0x34bee9);if(_0x5144f9){const _0x1354e0=parseInt(_0x5144f9[0x0]),_0x184cb7=_0x5144f9[0x1]+'\x20('+_0x5144f9[0x2]+',\x20'+_0x5144f9[0x3]+_0x32a9ba(0xd5)+_0x5144f9[0xb]+_0x32a9ba(0x116),_0x37f409=_0x28806a[_0x3401de%_0x28806a[_0x32a9ba(0x11c)]];if(!_0x4a8156[_0x32a9ba(0x128)](_0x184cb7)){const _0xb5c60e=document[_0x32a9ba(0xd1)]('li');_0xb5c60e['textContent']=_0x184cb7,_0xb5c60e['classList'][_0x32a9ba(0xc6)](_0x37f409),_0x5910bc(_0x184cb7,_0x1354e0-0x1,_0x37f409),_0x3401de++;}}});}_0x9173df();const _0x275b07=document['createElement'](_0xe3708d(0xae));_0x275b07['id']=_0xe3708d(0x11f);const _0x3ff1f5=document[_0xe3708d(0x98)](_0xe3708d(0x10d));_0x3ff1f5['appendChild'](_0x275b07);let _0x5de30e=0x0;searchButton1[_0xe3708d(0x10b)](_0xe3708d(0x10a),function(){const _0x167c13=_0xe3708d,_0xe53a=_0x7ed9e7[_0x167c13(0x10c)],_0x163443=_0x5e09f0(_0xe53a);if(_0x163443[_0x167c13(0x11c)]>0x0){const _0x41b293=_0x163443[0x0];_0x35dcc9(_0x41b293),_0x5de30e++;}_0x7ed9e7[_0x167c13(0x10c)]='',_0x388da7();});function _0x35dcc9(_0x249d20){const _0x38acc9=_0xe3708d,_0x15bcc9=parseInt(_0x249d20[0x0])-0x1,_0xf20f1=[],_0x4425a6=document[_0x38acc9(0xff)](_0x38acc9(0xe4));let _0x1c576a='';if(_0x4425a6[_0x38acc9(0x11c)]>0x0){const _0x22eadf=_0x4425a6[_0x4425a6[_0x38acc9(0x11c)]-0x1],_0x3a326f=_0x22eadf[_0x38acc9(0xf2)](_0x38acc9(0x100)),_0x517138=Array[_0x38acc9(0x135)](_0x3a326f[_0x38acc9(0x9f)]);_0x1c576a=_0x517138[_0x38acc9(0xd0)](_0x39083f=>_0x39083f[_0x38acc9(0xb8)]('result-color-'));}for(let _0x75346=0x0;_0x75346<_0x39bec0[_0x38acc9(0x11c)];_0x75346++){if(_0x75346!==_0x15bcc9){const _0x260f7a=_0xe3f55b(_0x249d20,_0x39bec0[_0x75346]);_0xf20f1[_0x38acc9(0xc8)]({'index':_0x75346,'difference':_0x260f7a});}}_0xf20f1[_0x38acc9(0xaa)]((_0x5c182e,_0x51e7b4)=>_0x5c182e[_0x38acc9(0xe2)]-_0x51e7b4[_0x38acc9(0xe2)]);const _0x16a48f=_0xf20f1[_0x38acc9(0xb1)](0x0,0x3),_0x8e5ac9=document[_0x38acc9(0x98)](_0x38acc9(0x11f));_0x8e5ac9[_0x38acc9(0xd3)]='';const _0x5ad0b2=document['createElement'](_0x38acc9(0x109));_0x5ad0b2[_0x38acc9(0x9f)][_0x38acc9(0xc6)](_0x38acc9(0x125));const _0x5419c1=document['createElement']('tr'),_0x213f11=document[_0x38acc9(0xd1)]('th');_0x213f11[_0x38acc9(0xf3)]('colspan','5'),_0x213f11[_0x38acc9(0xc4)]=_0x38acc9(0xbf)+_0x249d20[0x1],_0x213f11[_0x38acc9(0x9f)][_0x38acc9(0xc6)](_0x1c576a||_0x28806a[_0x5de30e%_0x28806a[_0x38acc9(0x11c)]]),_0x5419c1['appendChild'](_0x213f11),_0x5ad0b2[_0x38acc9(0xf7)](_0x5419c1);const _0x44fb49=document['createElement']('tr');for(let _0x4f79ad=0x0;_0x4f79ad<_0x16a48f[_0x38acc9(0x11c)];_0x4f79ad++){const _0x4447b7=_0x16a48f[_0x4f79ad]['index'],_0x27be1e=_0x39bec0[_0x4447b7][0x1],_0x346955=document['createElement']('td');_0x346955[_0x38acc9(0xc4)]=_0x27be1e,_0x346955[_0x38acc9(0x92)]['fontSize']=_0x38acc9(0xef),_0x346955[_0x38acc9(0x92)][_0x38acc9(0x114)]=_0x38acc9(0x95),_0x346955[_0x38acc9(0x92)]['cursor']=_0x38acc9(0xa9),_0x346955[_0x38acc9(0x10b)](_0x38acc9(0x10a),function(){const _0x2e005d=_0x38acc9,_0x10cf27=document[_0x2e005d(0x98)]('searchInput1'),_0x280762=document[_0x2e005d(0x98)](_0x2e005d(0x119));_0x10cf27['value']=_0x27be1e,_0x280762[_0x2e005d(0x10a)]();}),_0x44fb49[_0x38acc9(0xf7)](_0x346955);}_0x5ad0b2[_0x38acc9(0xf7)](_0x44fb49),_0x8e5ac9[_0x38acc9(0xf7)](_0x5ad0b2);}});})[_0x33cf63(0x12d)](_0x5094a4=>{const _0x26267c=_0x33cf63;console[_0x26267c(0xb5)](_0x26267c(0x137),_0x5094a4);});	
-</script>
-	  
-<script>async function takeScreenshot() {
-  const body = document.querySelector('body');
-  const isDarkMode = body.classList.contains('dark-mode');
-  const backgroundColor = isDarkMode ? '#0F0F0E' : '#ffffff'; // Black for dark mode, white for light mode
-  
-  try {
-    const element = document.querySelector('.screenshotcontainer'); // Capture the screenshotcontainer using the class name
-    if (!element) {
-      throw new Error('screenshotcontainer element not found');
-    }
 
-    const canvas = await html2canvas(element, {
-        width: 468,
-        height: element.offsetHeight + 12, 
-        y: -10,
-        x: -10,
-        useCORS: true,
-        backgroundColor: backgroundColor, // Set the background color based on mode
-        scale: window.devicePixelRatio,
-        logging: false, // Disable logging for production
-        foreignObjectRendering: false,
+const fetchPromises1 = urls1.map(url => fetch(url).then(response => response.arrayBuffer()));
+const fetchPromises2 = urls2.map(url => fetch(url).then(response => response.arrayBuffer()));
+
+function processAndStoreData1(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+              row[15] = `${row[1]} 23/24`;
+                              const reorderedRow = [
+              row[0],
+              row[15],
+              row[2],
+              row[3],
+              row[8],
+              row[10],
+              row[11],
+              row[5],
+              row[6],
+              row[7],
+              row[9],
+              row[4]
+          ];
+
+            allData1.push(reorderedRow);
+        });
     });
 
-    canvas.toBlob(blob => {
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'screenshot.png';
-      link.click();
-    }, 'image/png');
-  } catch (error) {
-    console.error('Error in takeScreenshot:', error);
-    // Handle errors appropriately (e.g., display to user or log)
-  }
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData1.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData1.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
+}
+
+function processAndStoreData(dataArray) {
+    // Unique ID counter
+    let uniqueIdCounter = 1;
+
+    dataArray.forEach(data => {
+        const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+        // Exclude header row
+        const dataWithoutHeader = jsonData.slice(1);
+
+        // Perform transformations and add unique ID
+        dataWithoutHeader.forEach(row => {
+            // Generate unique ID and shift columns
+            row.unshift(`${uniqueIdCounter++}`);
+
+            // Shift columns as needed
+            row[15] = `${row[1]} 24/25`;
+
+            const reorderedRow = [
+            row[0],
+            row[15],
+            row[2],
+            row[3],
+            row[8],
+            row[10],
+            row[11],
+            row[5],
+            row[6],
+            row[7],
+            row[9],
+            row[4]
+        ];
+            allData2.push(reorderedRow);
+        });
+    });
+    // Extract values from columns 4, 5, 6, 7, 8, 9, and 10
+    const columnsToConvert = [4, 5, 6, 7, 8, 9, 10];
+    const columnValues = columnsToConvert.map(col => allData2.map(row => parseFloat(row[col])));
+
+    // Calculate percentiles
+    const percentiles = columnValues.map(values => {
+        const sorted = [...values].sort((a, b) => a - b);
+        return values.map(value => {
+            const rank = sorted.indexOf(value) + 1;
+            return (rank / sorted.length);
+        });
+    });
+
+    // Replace original values with percentiles
+    allData2.forEach((row, rowIndex) => {
+        columnsToConvert.forEach((col, colIndex) => {
+            row[col] = percentiles[colIndex][rowIndex].toFixed(3);
+        });
+    });
+}
+Promise.all(fetchPromises1)
+    .then(responses => {
+        processAndStoreData(responses);
+
+    
+        // Fetch and process the remaining files
+        Promise.all(fetchPromises2)
+            .then(responses2 => {
+                processAndStoreData1(responses2);
+
+                // Concatenate intermediate data with new data
+                const finalData = allData2.concat(allData1);
+
+                // Reset and assign new unique IDs
+                finalData.forEach((row, index) => {
+                    row[0] = `${index + 1}`;
+                });
+                
+                finalData.forEach(row => {
+                    allDataAsString += row.join(',') + '\n';
+                });
+
+
+                const inputLines = allDataAsString.trim().split('\n');
+
+      const outputLines = [];
+  
+      for (const line of inputLines) {
+          // Split the line by comma
+          const parts = line.split(',');
+
+          // Extract the desired fields
+          const name = parts[1];
+          const age = parts[3];
+          const club = parts[2];
+
+          // Create the formatted string
+          const outputLine = `${name},${age},${club}`;
+
+          // Add the formatted string to the output array
+          outputLines.push(outputLine);
+      }
+
+const names = outputLines;
+const searchInput = document.getElementById('searchInput1');
+      searchInput.setAttribute("autocomplete", "off");
+ const matchingNamesContainer = document.getElementById("matchingNames");
+const searchButton = document.getElementById("searchButton");
+
+
+function updateMatchingNames() {
+const searchQuery = removeSpecialChars(searchInput.value.toLowerCase());
+const matchingNames = names.filter(function(name) {
+const [fullName] = name.split(",");
+  const normalizedName = removeSpecialChars(fullName.toLowerCase());
+    return normalizedName.includes(searchQuery);
+});
+
+matchingNamesContainer.innerHTML = "";
+
+matchingNames.forEach(function(name) {
+  const [fullName, team, age] = name.split(",");
+
+  const nameElement = document.createElement("div");
+  nameElement.classList.add("name");
+
+  const fullNameElement = document.createElement("span");
+  fullNameElement.textContent = fullName;
+  fullNameElement.classList.add("fullName");
+  nameElement.appendChild(fullNameElement);
+
+  const ageElement = document.createElement("span");
+  ageElement.textContent = " (" + age + ",";
+  ageElement.classList.add("age");
+  nameElement.appendChild(ageElement);
+
+  const teamElement = document.createElement("span");
+  teamElement.textContent = " " + team + ")";
+  teamElement.classList.add("team");
+  nameElement.appendChild(teamElement);
+
+  nameElement.addEventListener("click", function(event) {
+    const clickedElement = event.target.closest(".name");
+    if (clickedElement) {
+      const fullName = clickedElement.querySelector(".fullName").textContent;
+      const age = clickedElement.querySelector(".age").textContent.trim();
+      const team = clickedElement.querySelector(".team").textContent
+      .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f\s]/g, '')
+      .replace(/[^a-zA-Z]/g, '');  
+      const searchQuery = fullName + "," + team + "," + age.substring(1, age.length - 1);
+  
+      searchInput.value = searchQuery; // Set the full query as the search input value
+      const enterKeyEvent = new KeyboardEvent("keyup", { key: "Enter" });
+      searchInput.dispatchEvent(enterKeyEvent); // Dispatch enter key event
+    }
+  });
+
+  matchingNamesContainer.appendChild(nameElement);
+              });
+            
+              if (searchQuery === "" && matchingNames.length === 0) {
+                matchingNamesContainer.style.display = "none";
+              } else {
+                matchingNamesContainer.style.display = "block";
+                matchingNamesContainer.style.padding = "8px";
+                matchingNamesContainer.style.position = "relative";
+                matchingNamesContainer.style.left = "13.3px";
+                matchingNamesContainer.style.zIndex = "9999"; // Set a high z-index value
+                matchingNamesContainer.style.width = "377px"; // Match the width of the search input
+                matchingNamesContainer.style.maxHeight = "267px"; // Limit height for long lists
+                matchingNamesContainer.style.overflowY = "auto"; // Enable scrolling if content exceeds height
+          
+                matchingNamesContainer.style.border = "1px solid #e0e0e0"; // Light gray border
+              }
+             
+              if (searchQuery === "") {
+                matchingNamesContainer.style.display = "none";
+              }
+            }
+
+searchInput.addEventListener("input", updateMatchingNames);
+searchInput.addEventListener("keyup", function(event) {
+if (event.key === "Enter") {
+  searchButton1.click(); // Trigger the search button click event
+} else if (event.key === "Backspace") {
+  updateMatchingNames();
+}
+});       
+
+
+
+
+const csvData = allDataAsString;
+let dataArray = csvData.trim().split('\n').map(line => line.split(','));
+
+
+
+
+function calculateEuclideanDifference(data1, data2) {
+let difference = 0;
+for (let i = 4; i <= 10; i++) {
+const metric1 = parseFloat(data1[i]);
+const metric2 = parseFloat(data2[i]);
+difference += Math.pow(metric1 - metric2, 2);
+}
+return Math.sqrt(difference);
 }
 
 
+
+const colorClasses = ['result-color-1', 'result-color-2', 'result-color-3', 'result-color-4', 'result-color-5', 'result-color-6', 'result-color-7', 'result-color-8', 'result-color-9', 'result-color-10', 'result-color-11', 'result-color-12', 'result-color-13', 'result-color-14', 'result-color-15', 'result-color-16', 'result-color-17', 'result-color-18', 'result-color-19', 'result-color-20', 'result-color-21', 'result-color-22', 'result-color-23', 'result-color-24', 'result-color-25', 'result-color-26', 'result-color-27', 'result-color-28', 'result-color-29', 'result-color-30', 'result-color-31', 'result-color-32', 'result-color-33', 'result-color-34', 'result-color-35', 'result-color-36', 'result-color-37'];
+
+let searchResults = []; // Declare the search results variable
+
+
+function removeSpecialChars(str) {
+return str.normalize('NFD').replace(/[\u0300-\u036f\s]/g, '') 
+.replace(/Ø/g, 'O')
+.replace(/ø/g, 'o')
+.replace(/ı/g, 'i');
+}
+
+function search(query) {
+const queryParts = query.split(',').map(part => part.trim()); // Split the query by commas and trim whitespace
+const name = queryParts[0]; // Extract the name part
+let age, team;
+
+// Extract age and team if they exist
+if (queryParts.length > 1) {
+age = queryParts[1].trim(); // Trim any leading or trailing spaces
+if (queryParts.length > 2) {
+team = queryParts[2].trim(); // Trim any leading or trailing spaces
+}
+}
+
+
+const results = dataArray.filter(data => {
+const normalizedName = removeSpecialChars(data[1].toLowerCase());
+const normalizedTeam = removeSpecialChars(data[2].toLowerCase());
+const normalizedAge = data[3].trim().toLowerCase(); // Trim any leading or trailing spaces
+
+
+// Check if the name matches
+const nameMatches = normalizedName.includes(removeSpecialChars(name.toLowerCase()));
+
+// Check if the age matches (or if age is not provided)
+const ageMatches = !age || normalizedAge === removeSpecialChars(age.toLowerCase());
+
+// Check if the team matches (or if team is not provided)
+const teamMatches = !team || normalizedTeam === removeSpecialChars(team.toLowerCase());
+
+// Return true if name matches and either age or team matches
+return nameMatches && ageMatches && teamMatches;
+});
+
+return results;
+}
+
+
+function createTable(teamName, teamIndex, color) {
+const resultsTable = document.getElementById('resultsTable');
+
+const headerNames = [
+];
+
+// Check if table headers exist
+const headersExist = resultsTable.querySelector('th') !== null;
+
+const table = headersExist ? resultsTable.querySelector('table') : document.createElement('table');
+table.classList.add('metrics-table');
+
+if (!headersExist) {
+// Create the table header
+const headerRow = document.createElement('tr');
+for (let i = 1; i < headerNames.length; i++) {
+const th = document.createElement('th');
+th.textContent = headerNames[i];
+headerRow.appendChild(th);
+}
+// We don't need a separate header for the x button anymore
+table.appendChild(headerRow);
+}
+
+
+
+
+const teamData = dataArray[teamIndex];
+const dataRow = document.createElement('tr');
+dataRow.style.display = 'flex';
+dataRow.style.alignItems = 'center';
+dataRow.style.position = 'relative';
+
+// Create a container for player data
+const playerDataContainer = document.createElement('div');
+playerDataContainer.style.display = 'flex';
+playerDataContainer.style.alignItems = 'center';
+playerDataContainer.style.flexGrow = '1';
+
+for (let i = 1; i <= 11; i++) {
+if (i === 1 || i === 2 || i === 3 || i === 11) {
+const td = document.createElement('td');
+if (i === 11) {
+td.textContent = teamData[i] + ' min';
+} else {
+td.textContent = teamData[i] + ',';
+}
+td.classList.add(color);
+playerDataContainer.appendChild(td);
+}
+}
+
+dataRow.appendChild(playerDataContainer);
+
+// Add a separate table cell for the "x" column
+const xCell = document.createElement('td');
+const xButton = document.createElement('button');
+xButton.textContent = 'x';
+xButton.classList.add('x-button');
+xCell.classList.add('x-cell');
+xButton.addEventListener('click', function () {
+  dataRow.remove(); // Remove the corresponding row from the table
+  const radarPolygons = document.querySelectorAll(`.radarPolygon.${color}`);
+  const radarLines = document.querySelectorAll(`.radarLines.${color}`);
+  const radarCircles = document.querySelectorAll(`.radarCircle.${color}`);
+
+  radarPolygons.forEach((polygon) => polygon.remove());
+  radarLines.forEach((line) => line.remove());
+  radarCircles.forEach((circle) => circle.remove());
+
+  // Get all remaining rows in the table
+  const remainingRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  
+  if (remainingRows.length > 0) {
+      // Get the last player's name from the last row
+      const lastRow = remainingRows[remainingRows.length - 1];
+      const lastPlayerName = lastRow.querySelector('td:first-child').textContent.split(',')[0];
+      
+      // Update similar players for the last remaining player
+      const lastPlayerData = dataArray.find(player => player[1] === lastPlayerName);
+      if (lastPlayerData) {
+          updateSimilarPlayers(lastPlayerData);
+      }
+  } else {
+      // If no players left, clear the similar players container
+      const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+          similarPlayersContainer.innerHTML = '';
+      }
+  }
+});
+
+xCell.appendChild(xButton);
+dataRow.appendChild(xCell);
+
+table.appendChild(dataRow);
+
+if (!headersExist) {
+resultsTable.appendChild(table);
+}
+
+const combResults = dataArray[teamIndex].join(', ');
+
+
+
+const outerRadius = 130;
+const center = [0, 0];
+const angles = [0, 2 * Math.PI / 7, 4 * Math.PI / 7, 6 * Math.PI / 7, 8 * Math.PI / 7, 10 * Math.PI / 7, 12 * Math.PI / 7];
+
+function axisValueToCartesian(axis, value) {
+let angle = angles[axis - 1];
+angle += (2 * Math.PI / 7) * 0.2;
+const x = 165 * value * Math.cos(angle);
+const y = 165 * value * Math.sin(angle);
+return { x, y };
+}
+
+const svg = document.querySelector('.radar');
+const radarWrapper = svg.appendChild(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
+radarWrapper.setAttribute('transform', 'translate(0,0)');
+radarWrapper.innerHTML = '';
+
+const data = [];
+const rowCols = combResults.split(',');
+for (let i = 4; i < 11; i++) {
+data.push({ axis: i - 3, value: parseFloat(rowCols[i]) });
+}
+
+const points = data.map(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+return `${x},${y}`;
+}).join(' ');
+
+const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+polyline.setAttribute('class', `radarLines ${color}`); // Add the color class to the polyline
+polyline.setAttribute('points', `${points} ${points.split(' ')[0]}`);
+polyline.setAttribute('stroke-width', '3');
+polyline.setAttribute('fill', 'none');
+radarWrapper.appendChild(polyline);
+
+const polygon = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+polygon.setAttribute('class', `radarPolygon ${color}`); // Add the color class to the polygon
+polygon.setAttribute('points', points);
+polygon.style.fillOpacity = '0.2';
+radarWrapper.appendChild(polygon);
+
+data.forEach(({ axis, value }) => {
+const { x, y } = axisValueToCartesian(axis, value);
+const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+circle.setAttribute('class', `radarCircle ${color}`); // Add the color class to the circle
+circle.style.fillOpacity = '0.86'; // Set the opacity to 1 (fully opaque)
+circle.setAttribute('r', '6');
+circle.setAttribute('cx', x);
+circle.setAttribute('cy', y);
+radarWrapper.appendChild(circle);
+});
+}
+
+
+function createTableForTeam1() {
+const searchInput = document.getElementById('searchInput1');
+const searchButton = document.getElementById('searchButton1');
+const resultsTable = document.getElementById('resultsTable');
+
+
+const teamNames = new Set(); // Keep track of unique team names
+
+const teamNamesList = document.createElement('ul');
+teamNamesList.style.fontFamily = 'Arial, sans-serif'; 
+teamNamesList.style.listStyleType = 'none'; // Remove the bullet points
+teamNamesList.style.paddingLeft = '9px'; // Adjust the padding to move it further left
+resultsTable.appendChild(teamNamesList);
+
+
+let searchCounter = 0; // Initialize search counter
+
+searchButton.addEventListener('click', function () {
+const searchQuery = searchInput.value;
+const results = search(searchQuery);
+
+if (results) {
+const teamId = parseInt(results[0]); // Parse the team ID from the results
+
+const teamName = results[1] + ' (' + results[2] + ', ' + results[3] + ') - ' + results[11] + ' min';
+const color = colorClasses[searchCounter % colorClasses.length]; // Get the color class based on the search counter
+
+if (!teamNames.has(teamName)) {
+
+const teamNameItem = document.createElement('li');
+teamNameItem.textContent = teamName;
+teamNameItem.classList.add(color); // Apply the color class to the team name
+
+
+createTable(teamName, teamId - 1, color); // Pass the team ID and color to createTable
+searchCounter++;
+
+}
+} 
+
+});
+
+
+}
+
+
+
+createTableForTeam1();
+
+
+
+let colorIndex = 0; // Initialize color index
+
+searchButton1.addEventListener("click", function() {
+  const searchQuery = searchInput.value;
+  const searchedPlayer = search(searchQuery);
+
+  if (searchedPlayer.length > 0) {
+      const searchedPlayerData = searchedPlayer[0];
+      updateSimilarPlayers(searchedPlayerData);
+      colorIndex++;
+  }
+
+  searchInput.value = '';
+  updateMatchingNames();
+});
+
+function updateSimilarPlayers(playerData) {
+  const searchedPlayerIndex = parseInt(playerData[0]) - 1;
+  const similarPlayers = [];
+  
+  // Find the color class of the LAST player from their row in the table
+  const playerRows = document.querySelectorAll('.metrics-table tr:not(:first-child)');
+  let playerColor = '';
+  if (playerRows.length > 0) {
+      const lastPlayerRow = playerRows[playerRows.length - 1];
+      const lastPlayerCell = lastPlayerRow.querySelector('td:first-child');
+      // Get all color classes from the element
+      const classes = Array.from(lastPlayerCell.classList);
+      // Find the color class (starts with 'result-color-')
+      playerColor = classes.find(cls => cls.startsWith('result-color-'));
+  }
+  
+  for (let i = 0; i < dataArray.length; i++) {
+      if (i !== searchedPlayerIndex) {
+          const difference = calculateEuclideanDifference(playerData, dataArray[i]);
+          similarPlayers.push({ index: i, difference: difference });
+      }
+  }
+
+  similarPlayers.sort((a, b) => a.difference - b.difference);
+  const mostSimilarPlayers = similarPlayers.slice(0, 3);
+
+  const similarPlayersContainer = document.getElementById('similarPlayersContainer');
+  similarPlayersContainer.innerHTML = ''; // Clear existing content
+
+  const similarPlayerTable = document.createElement("table");
+  similarPlayerTable.classList.add("similar-table");
+  
+  // Set width and alignment for the table
+  similarPlayerTable.style.width = "100%";
+  similarPlayerTable.style.textAlign = "center";
+
+  const headerRow = document.createElement("tr");
+  const headerCell = document.createElement("th");
+  headerCell.setAttribute("colspan", "5");
+  headerCell.innerHTML = `<span data-i18n="similar.to">Similar data to</span> ${playerData[1]}`;
+  // Use the last player's color class instead of the first one
+  headerCell.classList.add(playerColor || colorClasses[colorIndex % colorClasses.length]);
+  headerRow.appendChild(headerCell);
+  similarPlayerTable.appendChild(headerRow);
+
+  const similarPlayerRow = document.createElement("tr");
+
+  for (let i = 0; i < mostSimilarPlayers.length; i++) {
+      const playerIndex = mostSimilarPlayers[i].index;
+      const playerName = dataArray[playerIndex][1];
+      
+      const playerCell = document.createElement("td");
+      playerCell.textContent = playerName;
+      playerCell.style.fontSize = "10.8px";
+      playerCell.style.textDecoration = "underline";
+      playerCell.style.cursor = "pointer";
+
+      playerCell.addEventListener("click", function() {
+          const searchInput = document.getElementById('searchInput1');
+          const searchButton = document.getElementById('searchButton1');
+          searchInput.value = playerName;
+          searchButton.click();
+      });
+
+      similarPlayerRow.appendChild(playerCell);
+  }
+
+  similarPlayerTable.appendChild(similarPlayerRow);
+  similarPlayersContainer.appendChild(similarPlayerTable);
+}
+
+}) })
+.catch(error => {
+console.error('Error fetching or processing data:', error);
+});
+
+
+</script>
+	  
+<script>async function takeScreenshot() {
+  const chartContainer = document.querySelector('.screenshotcontainer');
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  
+  html2canvas(chartContainer, {
+    scale: 2,
+    backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
+    allowTaint: true,
+    useCORS: true,
+    logging: false,
+    foreignObjectRendering: false,
+    imageTimeout: 0,
+    onclone: function(clonedDoc) {
+      // Hide similar players table
+      const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
+      if (similarPlayersContainer) {
+        similarPlayersContainer.style.display = 'none';
+      }
+      
+      // Hide everything above results table
+      const positionSwitcher = clonedDoc.querySelector('.position-switcher-container');
+      const searchContainer = clonedDoc.querySelector('.search-container');
+      if (positionSwitcher) positionSwitcher.style.display = 'none';
+      if (searchContainer) searchContainer.style.display = 'none';
+      
+      // Fix SVG positioning
+      const radarSVG = clonedDoc.querySelector('.radar');
+      if (radarSVG) {
+        radarSVG.style.display = 'block';
+        radarSVG.style.margin = '0 auto';
+        
+        // Ensure transform is properly applied to SVG's inner group
+        const svgGroup = radarSVG.querySelector('g');
+        if (svgGroup) {
+          svgGroup.setAttribute('transform', 'translate(195.5, 195.5)');
+        }
+      }
+    }
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'DataMB Screenshot.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
 
   // Function to toggle dark mode
   function toggleDarkMode() {
@@ -1174,48 +1586,20 @@ const _0x33cf63=_0x34ed;function _0x34ed(_0x173295,_0x6f8e18){const _0x18f3a1=_0
     body.classList.add("dark-mode");
   }
 
-           
-
-
-
-</script>
-<div class="emptycontainer"></div>
-
-
-        <div class="finalcontainer">
-
-<center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
-crossorigin="anonymous"></script>
-<!-- radarplotsearch -->
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-7677714701428206"
-data-ad-slot="6673239737"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
-</div>
-
-
-<script>
-    // Function to scroll down a tiny bit
-    function scrollDown() {
-        window.scrollBy(0, 100); // Adjust the value (100) to change the scroll distance
-    }
-
-    // Function to scroll up a tiny bit
-    function scrollUp() {
-        window.scrollBy(0, -80); // Adjust the value (-80) to change the scroll distance
-    }
-
-    // Combine both actions with a small timer between them
-    window.onload = function() {
-        scrollDown();
-        setTimeout(scrollUp, 100); // Adjust the delay time (1000ms = 1 second)
-    };
-</script>
-
+</script></div></div>
+<center>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7677714701428206"
+       crossorigin="anonymous"></script>
+  <!-- radarplotsearch -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-7677714701428206"
+       data-ad-slot="6673239737"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script></center>
 </body>
 </html>
+
