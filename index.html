@@ -883,13 +883,10 @@ function _0x1f72(_0x15ed5d,_0x3c47be){const _0x12efc9=_0x12ef();return _0x1f72=f
   const isDarkMode = document.body.classList.contains('dark-mode');
   
   html2canvas(chartContainer, {
-    scale: 2,
     backgroundColor: isDarkMode ? '#0F0F0E' : '#FFFFFF',
-    allowTaint: true,
     useCORS: true,
     logging: false,
     foreignObjectRendering: false,
-    imageTimeout: 0,
     onclone: function(clonedDoc) {
       // Hide similar players table
       const similarPlayersContainer = clonedDoc.getElementById('similarPlayersContainer');
