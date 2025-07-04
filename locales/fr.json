@@ -3,13 +3,13 @@
     "placeholder2": "Chercher un latéral..."
   },
   "radar": {
-    "a": "% Aérien",
-    "b": "% Duels",
-    "c": "Actions Déf",
-    "d": "Passes Prog",
-    "e": "xAssist",
-    "f": "% Centres",
-    "g": "Courses"
+    "aerial": "% Aérien",
+    "duel": "% Duel déf",
+    "possWon": "Poss gagnées",
+    "progPasses": "Passes prog",
+    "xAssist": "xAssist",
+    "cross": "Centres",
+    "carrying": "Courses"
   },
   "similar": {
     "to": "Données similaires à"
