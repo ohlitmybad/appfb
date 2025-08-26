@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Bek adı girin..."
+  },
+  "radar": {
+    "aerial": "Hava%",
+    "duel": "Savunma%",
+    "possWon": "Top kazanma",
+    "progPasses": "Hücum pası",
+    "xAssist": "xAsist",
+    "cross": "Ortalar",
+    "carrying": "Taşıma"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  }
+} 

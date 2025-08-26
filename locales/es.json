@@ -1,0 +1,17 @@
+{
+  "search": {
+    "placeholder2": "Introduce nombre de lateral..."
+  },
+  "radar": {
+    "aerial": "Aéreo%",
+    "duel": "Duelo def%",
+    "possWon": "Pos ganada",
+    "progPasses": "Pases prog",
+    "xAssist": "xAsistencia",
+    "cross": "Centros",
+    "carrying": "Conducción"
+  },
+  "similar": {
+    "to": "Datos similares a"
+  }
+} 
