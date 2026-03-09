@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Name des Außenverteidigers eingeben..."
+  },
+  "radar": {
+    "aerial": "Kopfball%",
+    "duel": "Def. Duelle%",
+    "possWon": "Balleroberungen",
+    "progPasses": "Prog. Pässe",
+    "xAssist": "xAssist",
+    "cross": "Flanken",
+    "carrying": "Ballführung"
+  },
+  "similar": {
+    "to": "Ähnliche Daten wie"
+  },
+  "header": {
+    "percentiles": "Perzentile",
+    "clickforinfo": "Klicken Sie auf eine Überschrift für den vollständigen Metriknamen",
+    "percentilesvstop7leagues": "Perzentile vs Top-7-Ligen",
+    "crossescompleted": "Flanken gespielt",
+    "expectedassists": "Erwartete Assists",
+    "progressivepassescompleted": "Progressive Pässe",
+    "possessionswon": "Balleroberungen",
+    "defensiveduelswon": "Defensive Duelle gewonnen %",
+    "aerialduelswon": "Kopfballduelle gewonnen %",
+    "progressivecarries": "Progressive Läufe",
+    "minutesplayed": "Minuten gespielt"
+  }
+}

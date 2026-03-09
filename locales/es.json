@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Introduce nombre de lateral..."
+  },
+  "radar": {
+    "aerial": "Aéreo%",
+    "duel": "Duelo def%",
+    "possWon": "Pos ganada",
+    "progPasses": "Pases prog",
+    "xAssist": "xAsistencia",
+    "cross": "Centros",
+    "carrying": "Conducción"
+  },
+  "similar": {
+    "to": "Datos similares a"
+  },
+  "header": {
+    "percentiles": "Percentiles",
+    "clickforinfo": "Clic en encabezado para ver métrica completa",
+    "percentilesvstop7leagues": "Percentiles vs Top 7 Ligas",
+    "crossescompleted": "Centros completados",
+    "expectedassists": "Asistencias esperadas",
+    "progressivepassescompleted": "Pases progresivos completados",
+    "possessionswon": "Posesiones ganadas",
+    "defensiveduelswon": "Duelos defensivos ganados %",
+    "aerialduelswon": "Duelos aéreos ganados %",
+    "progressivecarries": "Conducciones progresivas",
+    "minutesplayed": "Minutos jugados"
+  }
+} 
