@@ -1,0 +1,30 @@
+{
+  "search": {
+    "placeholder2": "Bek adı girin..."
+  },
+  "radar": {
+    "aerial": "Hava%",
+    "duel": "Savunma%",
+    "possWon": "Top kazanma",
+    "progPasses": "Hücum pası",
+    "xAssist": "xAsist",
+    "cross": "Ortalar",
+    "carrying": "Taşıma"
+  },
+  "similar": {
+    "to": "Benzer veri"
+  },
+  "header": {
+    "percentiles": "Yüzdelikler",
+    "clickforinfo": "Tam metrik adını görmek için başlığa tıklayın",
+    "percentilesvstop7leagues": "En İyi 7 Lig vs Yüzdelikler",
+    "crossescompleted": "Tamamlanan orta",
+    "expectedassists": "Beklenen asistler",
+    "progressivepassescompleted": "Hücum pasları tamamlandı",
+    "possessionswon": "Top hakimiyeti kazanıldı",
+    "defensiveduelswon": "Savunma mücadeleleri kazanıldı %",
+    "aerialduelswon": "Hava mücadeleleri kazanıldı %",
+    "progressivecarries": "Hücum taşımaları",
+    "minutesplayed": "Oynanan dakikalar"
+  }
+} 
